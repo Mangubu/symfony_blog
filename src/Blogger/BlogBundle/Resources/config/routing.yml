@@ -1,0 +1,43 @@
+BloggerBlogBundle_homepage:
+    path:  /
+    defaults: { _controller: BloggerBlogBundle:Page:index }
+    requirements:
+        _method:  GET
+
+BloggerBlogBundle_about:
+    path:  /about
+    defaults: { _controller: BloggerBlogBundle:Page:about }
+    requirements:
+        _method:  GET
+
+BloggerBlogBundle_contact:
+    path:  /contact
+    defaults: { _controller: BloggerBlogBundle:Page:contact }
+    requirements:
+        _method:  GET|POST
+
+BloggerBlogBundle_blog_new:
+    path:  /new
+    defaults: { _controller: BloggerBlogBundle:Blog:new }
+    requirements:
+        _method:  GET|POST
+
+BloggerBlogBundle_blog_show:
+    path:  /{id}
+    defaults: { _controller: BloggerBlogBundle:Blog:show }
+    requirements:
+        _method:  GET
+        id: \d+
+
+BloggerBlogBundle_succes:
+    path:  /success
+    defaults: { _controller: BloggerBlogBundle:Page:succes }
+    requirements:
+        _method:  GET
+
+
+BloggerBlogBundle_error:
+    path:  /success
+    defaults: { _controller: BloggerBlogBundle:Page:error }
+    requirements:
+        _method:  GET
